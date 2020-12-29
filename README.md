@@ -12,3 +12,6 @@ JavaScript已经可以说一统前端了，其衍生的框架涵盖了Web前端�
 ### 1.2 衍生JS和相关框架
 
 流行的如微软的 TypeScript，框架如 Vue.js, React 等，需要按官方指南部署开发环境。
+
+## 2. 开发环境部署
+使用VScode(JavaScript), Bluefish, Kdevelop等网页开发工具即可，或使用Adobe Dreamweaver可视化开发。
