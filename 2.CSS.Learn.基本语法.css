@@ -12,23 +12,71 @@ h1, p, li{              /* 修改器可选择多个对象 */
 }
 
 /* 不同的选择器 */
-
+/*
+元素选择器：     p              选择 <p>
+ID选择器：      #my-id         选择 <p id="my-id">
+类选择器：      .my-class       选择 <p class="my-class">
+属性选择器：     img[src]       选择 <img src='myimage.png">
+（伪）类选择器：  a:hover       鼠标悬停时选择 <a>
+*/
 
 /* 字体和文本 */
-
+/* 在 HTML 文件的 <head> 块中，创建引用时，标记对字体的引用 */
+/*<link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css"> */
+html {                  /* 针对 HTML 文件全局的设置*/
+    /* px 表示“像素(pixels)“： 基础字号为 10px； */
+    font-size: 10px;
+    /* Gogle Fonts 输出的CSS */
+    font-size: 'Open Sans', sans-serif; /* 字体 */
+}
+h1 {
+    font-size: 60px;    /* 字号 */
+    text-align: center; /* 居中显示 */
+}
+p,li {
+    font-size: 16px;
+    line-height: 2;     /* 行高 */
+    letter-spacing: 1px;/* 字符间距 */
+}
 
 /* 盒子 */
-
+/*
+页面里大部分 HTML 元素都可被看做若干层叠的盒子；
+padding: 内边距，围绕着内容的空间；
+border: 边框，紧接着内边距的线；
+margin: 外边距，围绕元素外部的空间；
+width: 元素宽度；
+background-color: 背景颜色（根据选择器不同，设置不同层级背景色）；
+color: 元素内容（文本）的颜色；
+text-shadow: 为元素内的文本设置阴影；
+display: 设置元素的显示模式
+*/
 
 /* 页面颜色 */
-
+html {
+    background-color: #00539F;  /* html 网页文件的背景颜色 */
+}
 
 /* Body格式 */
-
+body {
+    width: 600px;                 /* body 宽度 */
+    margin: 0 auto;               /* */
+    background-color: #FF9500;  /* body 页面的背景颜色 */
+    padding: 0 20px 20px 20px;    /* 上下左右内边距，上面为 0px 边距 */
+    border: 5px solid black;    /* 页面边框线宽度，填充，黑色 */
+}
 
 /* 主标题样式 */
-
+h1 {                    /* 选择 h1 级标题 */
+    margin: 0;          /* 覆盖默认样式 */
+    padding: 20px 0;    /* 上下内边距，上面留出 20px 宽度 */
+    color: #00539F;   /* 文字颜色 */
+    text-shadow: 3px 3px 1px black; /* 阴影的水平偏移，垂直偏移，模糊半径，阴影颜色 */
+}
 
 /* 图像居中 */
-
+img {
+    display: block;
+    margin: 0 auto;
+}
 
