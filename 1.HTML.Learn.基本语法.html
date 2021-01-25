@@ -2,13 +2,21 @@
 <html>				<!--根元素，html 页面的外边界-->
 	<head>			<!--用户不可见，搜索关键字、页面描述、CSS 样式、字符编码-->
 		<meta charset="utf-8">			<!--文档使用的字符编码-->
-		<title>Test Page.</title>		<!--显示在标签页上的网页标题-->
+        <title>Test Page.</title>		<!--显示在标签页上的网页标题-->
+        <link rel="stylesheet" type="text/css" href="mystyle.css">  <!--外部样式表-->
+        <style type="text/css">         /*内部样式表*/
+            body {background-color: red}
+            p {margin-left: 20px}
+        </style>
 	</head>
 	<body>
 		<h1>Title of This Page</h1>		<!--一级标题-->
 		<h2>Sub Title</h2>				<!--二级标题，共分六级，一般用到四级-->
-		
-		
+		<p style="color: red; margin-left: 20px">
+            This is a paragraph         <!--内联样式，在具体位置使用-->
+        </p>
+        
+        
 		<!--1.内容强调-->
 		<p>
 			This is the <strong>First Paragraph</strong>.	<!--加粗-->
@@ -16,8 +24,8 @@
 		<p>
 			This is the <em>Second Paragraph</em>.	<!--斜体-->
 		</p>
-		<!--使用<b></b>表示加粗，使用<i></i>表示斜体，使用<u></u>表示下划线-->
-		
+		<!--使用<b></b>表示加粗，使用<i></i>表示斜体，使用<u></u>表示下划线(废弃)-->
+		<!--<big>定义大号字，<em>定义着重文字，<small>定义小号字，<del>定义删除字-->
 		
 		<!--2.列表-->
 		<ul>							<!--无序列表标记 unordered list-->
@@ -30,25 +38,46 @@
 			<li>an</li>
 			<li>ordered list.</li>
 		</ol>
-		
-		
-		<!--3.空元素-图像-->
+        
+
+        <!--3.表格table-->
+        <table border="1">              <!--定义表格-->
+            <caption>默认居中显示的表格标题</caption>
+            <tr>
+                <th>表头项目1-姓名</th>
+                <th>表头项目2-性别</th>
+                <th>表头项目3-年龄</th>
+            </tr>
+            <tr>
+                <td>Xi</td>
+                <td>man</td>
+                <td>30</td>
+            </tr>
+        </table>
+        
+        
+		<!--4.空元素-图像-->
 		<!--<img>是一对空元素，因为本身不需要通过内容产生效果，其作用是向所在位置嵌入一个图像；也不需要</img>标记来结束-->
-		<img src="/home/oca/Pictures/icons/windows-start.png" alt="Windows-Start">	<!--图片不可见时显示 alt 内容-->
+		<img src="/home/oca/Pictures/icons/windows-start.png" width="90" height="90" alt="Windows-Start">	<!--图片不可见时显示 alt 内容-->
 		<p>
-			This is the second paragraph.
-		</p>
+			This is the second paragraph. 这是一个新的段落，存在<br />折行，但是不产生另一个新段落。
+		</p>                            <!--使用<br />闭合标签来折行，比使用<br>开放标签更安全-->
 		
 		
-		<!--4.锚点-超链接-->
+		<!--5.锚点-超链接-->
 		<a href="https://www.bing.com">Bing 主页</a>    <!--锚点元素-->
 		<a href="https://www.mozilla.org/zh-CN/about/manifesto/">Mozilla 宣言</a>
 		<p><a href="https://www.bing.com">              <!--好的超链接应将超链文本和说明文字融合-->
 			访问必应主页
 		</a></p>
-		
         
-        <!--5.分组列表-->
+        
+        <ht/>                           <!--表示水平分割线-->
+        <div>定义块级元素，可创建灵活的网页布局。</div>
+        <!--通过对不同<div>块根据id定义各自的位置和显示属性，分块定义内容。-->
+
+        
+        <!--6.分组列表-->
         <!--描述列表dl，描述列表子项dt，描述列表描述部分dd-->
         <dl>                            <!--描述列表的边界符-->
             <dt>描述列表的子项(description term)，类似子标题</dt>
@@ -58,7 +87,7 @@
         </dl>
 
 
-		<!--6.块引用和行内引用-链接-->
+		<!--7.块引用和行内引用-链接-->
         <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
             <p>
                 The <b>HTML<code>&lt;blockquote&gt;</code>Element</b>(or <i>HTML Block Quotation Element</i>) indicates that the enclosed text is an extended quotation.
@@ -66,25 +95,26 @@
         </blockquote>
         
 
-		<!--7.引文-->
-        <p><q>单行引用</q>的问题本。</p>
-        <blockquote>
+		<!--8.引文-->
+        <p><q>单行引用</q>的问题本。</p>   <!--短引用-->
+        <blockquote>                    <!--长引用，附带缩进处理-->
             <p>这里是块引用内容。</p>
         </blockquote>
+        <abbr>定义缩写</abbr>
         
         
-		<!--8.上下标-->
+		<!--9.上下标-->
         <p>上标写法的方程式：y=x<sup>2</sup>+b</p>
         <p>下标写法的水分子式：H<sub>2</sub>O</p>
 
 
-		<!--9.代码块-->
+		<!--10.代码块-->
         <!--
-            <code>  包裹代码块
-            <pre>   包裹需要保留空白和缩进的代码（与编辑器中相同）
-            <var>   标记变量名
-            <kbd>   标记键盘输入的按键
-            <samp>  标记计算机输出
+            <code>  代码块
+            <pre>   预格式文本，包裹需要保留空白和缩进的代码（与编辑器中相同）
+            <var>   变量
+            <kbd>   键盘码
+            <samp>  计算机输出
         -->
         <pre><code>
             def hello():
@@ -98,7 +128,17 @@
         </samp>
         
 
-        <!--10.时间与日期-->
+        <!--11.时间与日期-->
+        <address>
+            Written by Jon Doe.<br/> 
+            Visit us at:<br/>
+            Example.com<br/>
+            Box 564, Disneyland<br/>
+            USA
+        </address>
+        
+
+        <!--12.时间与日期-->
         <!--<time>标签是以机器可读的方式对日期与时间进行编码，属性部分是给计算机和搜索引擎看的，文本标签是展示给用户的-->
         <!--包含具体日期-->
         <time datetime="2021-01-20">2021年1月</time>
