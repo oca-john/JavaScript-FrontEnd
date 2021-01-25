@@ -6,10 +6,21 @@ h2 {                    /* h2 称为选择器，选择 h2 级别的标题作为�
     border:1px solid black;     /* 边线线宽和颜色 */
 }
 
+
 /* 多选择器示例 */
 h1, p, li{              /* 修改器可选择多个对象 */
     color:chocolate
 }
+
+
+/* 继承问题 */
+body {                  /* body内包含的所有子元素继承下列属性 */
+    font-family:'Times New Roman', Times, serif;
+}
+p {                     /* 针对某个子元素的特殊属性，会优先于继承得到的属性 */
+    font-family: Verdana, sans-serif;
+}
+
 
 /* 不同的选择器 */
 /*
@@ -19,6 +30,19 @@ ID选择器：      #my-id         选择 <p id="my-id">
 属性选择器：     img[src]       选择 <img src='myimage.png">
 （伪）类选择器：  a:hover       鼠标悬停时选择 <a>
 */
+
+
+/* 派生选择器 */
+strong {            /*普通strong选择器*/
+    color: red;
+    }
+h2 {                /*普通h2选择器*/
+    color: red;
+    }
+h2 strong {         /*从strong选择器派生得到的新选择器*/
+    color: blue;    /*两组标签同时包裹的内容应用新的属性*/
+    }
+
 
 /* 字体和文本 */
 /* 在 HTML 文件的 <head> 块中，创建引用时，标记对字体的引用 */
@@ -39,6 +63,7 @@ p,li {
     letter-spacing: 1px;/* 字符间距 */
 }
 
+
 /* 盒子 */
 /*
 页面里大部分 HTML 元素都可被看做若干层叠的盒子；
@@ -52,10 +77,16 @@ text-shadow: 为元素内的文本设置阴影；
 display: 设置元素的显示模式
 */
 
+
 /* 页面颜色 */
 html {
     background-color: #00539F;  /* html 网页文件的背景颜色 */
 }
+/* 页面背景 */
+html {
+    background-image: url(../images);
+}
+
 
 /* Body格式 */
 body {
@@ -66,6 +97,7 @@ body {
     border: 5px solid black;    /* 页面边框线宽度，填充，黑色 */
 }
 
+
 /* 主标题样式 */
 h1 {                    /* 选择 h1 级标题 */
     margin: 0;          /* 覆盖默认样式 */
@@ -74,9 +106,11 @@ h1 {                    /* 选择 h1 级标题 */
     text-shadow: 3px 3px 1px black; /* 阴影的水平偏移，垂直偏移，模糊半径，阴影颜色 */
 }
 
+
 /* 图像居中 */
 img {
     display: block;
     margin: 0 auto;
 }
+
 
