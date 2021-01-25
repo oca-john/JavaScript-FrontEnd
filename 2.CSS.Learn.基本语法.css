@@ -85,6 +85,10 @@ html {
 /* 页面背景 */
 html {
     background-image: url(../images);
+    background-repeat: repeat-x, repeat-y;  /* 横向和纵向重复填充 */
+    background-position: center;    /* 背景图像定位，居中，包括center, top, bottom, right, left */
+    background-position:50% 50%;    /* 0 0是左上角，100 100是右下角 */
+    background-attachment: fixed;   /* 背景图像固定，不随页面滚动 */
 }
 
 
@@ -114,3 +118,7 @@ img {
 }
 
 
+/* 文本缩进 */
+p {text-indent: 5em;}   /* 缩进 5 em，缩进为负值，表示悬挂缩进（如下） */
+p {text-indent: -5em; padding-left: 5em;}   /* padding表示内边距，防止文本超出网页边框 */
+p {text-indent: 20%;}   /* 按照百分比缩进 */
