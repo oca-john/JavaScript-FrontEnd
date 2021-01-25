@@ -1,21 +1,22 @@
-/* 直接在Html文件中写内容
+<!--直接在Html文件中写内容-->
+<!--
 <html>
-<head>
-  <script>
-    alert('Hello, world');    // <script>标记中间的部分可另存为独立的JS文件，供html文件调用
-  </script>                   // html中以<script src="/path/to/js/file.js"></script>方式调用即可
-</head>
+  <head>
+    <script>
+      alert('Hello, world');    // <script>标记中间的部分可另存为独立的JS文件，供html文件调用
+    </script>                   // html中以<script src="/path/to/js/file.js"></script>方式调用即可
+  </head>
 <body>
   ...
 </body>
 </html>
-*/
+-->
 
-// 独立JS文件示例
-// JS代码写入文件，Html中用<script>调用JS文件
+<!--独立JS文件示例-->
+<!--JS代码写入文件，Html中用<script>调用JS文件-->
 <html>
 <head>
-  <script src="/static/js/abc.js"></script>
+  <script src="/path/to/javascriptfile.js"></script>
 </head>
 <body>
   ...
