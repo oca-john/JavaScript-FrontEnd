@@ -1,15 +1,24 @@
 <!DOCTYPE html>		<!--文档类型，必须大写-->
 <html>				<!--根元素，html 页面的外边界-->
 	<head>			<!--用户不可见，搜索关键字、页面描述、CSS 样式、字符编码-->
-		<meta charset="utf-8">			<!--文档使用的字符编码-->
         <title>Test Page.</title>		<!--显示在标签页上的网页标题-->
+		<meta charset="utf-8">			<!--文档使用的字符编码-->
         <link rel="stylesheet" type="text/css" href="mystyle.css">  <!--外部样式表-->
         <style type="text/css">         /*内部样式表*/
             body {background-color: red}
             p {margin-left: 20px}
         </style>
 	</head>
-	<body>
+	<!--
+    纯色背景
+    <body bgcolor="#000000">
+    <body bgcolor="rgb(0,0,0)">
+    <body bgcolor="black">
+    图像背景
+    <body background="clouds.gif">
+    <body background="http://www.w3school.com.cn/clouds.gif">
+    -->
+    <body>
 		<h1>Title of This Page</h1>		<!--一级标题-->
 		<h2>Sub Title</h2>				<!--二级标题，共分六级，一般用到四级-->
 		<p style="color: red; margin-left: 20px">
@@ -60,21 +69,16 @@
 		<!--<img>是一对空元素，因为本身不需要通过内容产生效果，其作用是向所在位置嵌入一个图像；也不需要</img>标记来结束-->
 		<img src="/home/oca/Pictures/icons/windows-start.png" width="90" height="90" alt="Windows-Start">	<!--图片不可见时显示 alt 内容-->
 		<p>
-			This is the second paragraph. 这是一个新的段落，存在<br />折行，但是不产生另一个新段落。
-		</p>                            <!--使用<br />闭合标签来折行，比使用<br>开放标签更安全-->
+			This is the second paragraph. 这是一个新的段落，存在<br/>折行，但是不产生另一个新段落。
+		</p>                            <!--使用<br/>闭合标签来折行，比使用<br>开放标签更安全-->
 		
 		
-		<!--5.锚点-超链接-->
+		<!--5.锚点Anchors-超链接-->
 		<a href="https://www.bing.com">Bing 主页</a>    <!--锚点元素-->
 		<a href="https://www.mozilla.org/zh-CN/about/manifesto/">Mozilla 宣言</a>
 		<p><a href="https://www.bing.com">              <!--好的超链接应将超链文本和说明文字融合-->
 			访问必应主页
 		</a></p>
-        
-        
-        <ht/>                           <!--表示水平分割线-->
-        <div>定义块级元素，可创建灵活的网页布局。</div>
-        <!--通过对不同<div>块根据id定义各自的位置和显示属性，分块定义内容。-->
 
         
         <!--6.分组列表-->
@@ -128,9 +132,9 @@
         </samp>
         
 
-        <!--11.时间与日期-->
+        <!--11.地址信息-->
         <address>
-            Written by Jon Doe.<br/> 
+            Written by Jon Doe.<br/>    <!--折行-->
             Visit us at:<br/>
             Example.com<br/>
             Box 564, Disneyland<br/>
@@ -148,5 +152,31 @@
         <time datetime="19:30">19:30</time>
         <!--日期和时间-->
         <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+
+
+        <!--13.Html实体-符号-->
+        <!--
+            空格,   &nbsp,  non-breaking space
+            <,      &lt,    little than
+            >,      &gt,    greater than
+            &,      &amp,
+            ",      &quot,
+            ',      &apos,
+            元,     &yen,
+            ×,      &times,
+            /,      &divide,
+        -->
+
+
+        <ht/>                           <!--表示水平分割线-->
+        <div>定义块级元素，可创建灵活的网页布局。</div>
+        <!--通过对不同<div>块根据id定义各自的位置和显示属性，分块定义内容。-->
+        
+        
+        <script type="text/javascript">     // 定义脚本类型(JS)
+            document.write("Hello World!")  // 向浏览器输出文本
+        </script>
+        <noscript>Your browser does not support JavaScript!</noscript>  <!--脚本不可用时显示的内容-->
+            
     </body>
 </html>
