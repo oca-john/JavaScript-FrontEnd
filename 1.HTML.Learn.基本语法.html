@@ -41,42 +41,72 @@
 		
 		
 		<!--4.锚点-超链接-->
-		<a href="https://www.bing.com">Bing 主页</a>		<!--锚点元素-->
+		<a href="https://www.bing.com">Bing 主页</a>    <!--锚点元素-->
 		<a href="https://www.mozilla.org/zh-CN/about/manifesto/">Mozilla 宣言</a>
-		<p><a href="https://www.bing.com">	<!--好的超链接应将超链文本和说明文字融合-->
+		<p><a href="https://www.bing.com">              <!--好的超链接应将超链文本和说明文字融合-->
 			访问必应主页
 		</a></p>
 		
-		
-		<!--5.表格和分组-->
-        	<!--描述列表dl，描述列表子项dt，描述列表描述部分dd-->
-        	<dl>                <!--描述列表的边界符-->
-            		<dt>描述列表的子项(description term)，类似子标题</dt>
-            		<dd>描述列表的描述部分(description description)，表示子项的具体描述。</dd>
-            		<dt>子项2</dt>
-            		<dd>子项2的具体描述部分。</dd>
-        	</dl>
-		
-		
+        
+        <!--5.分组列表-->
+        <!--描述列表dl，描述列表子项dt，描述列表描述部分dd-->
+        <dl>                            <!--描述列表的边界符-->
+            <dt>描述列表的子项(description term)，类似子标题</dt>
+            <dd>描述列表的描述部分(description description)，表示子项的具体描述。</dd>
+            <dt>子项2</dt>
+            <dd>子项2的具体描述部分。</dd>
+        </dl>
+
+
 		<!--6.块引用和行内引用-链接-->
-		
-		
-		
+        <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+            <p>
+                The <b>HTML<code>&lt;blockquote&gt;</code>Element</b>(or <i>HTML Block Quotation Element</i>) indicates that the enclosed text is an extended quotation.
+            </p>
+        </blockquote>
+        
+
 		<!--7.引文-->
-		
-		
-		
+        <p><q>单行引用</q>的问题本。</p>
+        <blockquote>
+            <p>这里是块引用内容。</p>
+        </blockquote>
+        
+        
 		<!--8.上下标-->
-		<p>上标写法的方程式：y=x<sup>2</sup>+b</p>	// 成对<sup>表上标
-		<p>下标写法的水分子式：H<sub>2</sub>O</p>		// 成对<sub>表下标
-		
-		
+        <p>上标写法的方程式：y=x<sup>2</sup>+b</p>
+        <p>下标写法的水分子式：H<sub>2</sub>O</p>
+
+
 		<!--9.代码块-->
-		
-		
-		
-		<!--10.时间与日期-->
-		
-		
-	</body>
+        <!--
+            <code>  包裹代码块
+            <pre>   包裹需要保留空白和缩进的代码（与编辑器中相同）
+            <var>   标记变量名
+            <kbd>   标记键盘输入的按键
+            <samp>  标记计算机输出
+        -->
+        <pre><code>
+            def hello():
+                print ("hello world.");
+        </code></pre>
+        <p>此处的<var>Var</var>表示定义了一个变量。</p>
+        <p>按住<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Delete</kbd>进入登录程序。</p>
+        <samp>
+            >>> hello()
+            hello world.
+        </samp>
+        
+
+        <!--10.时间与日期-->
+        <!--<time>标签是以机器可读的方式对日期与时间进行编码，属性部分是给计算机和搜索引擎看的，文本标签是展示给用户的-->
+        <!--包含具体日期-->
+        <time datetime="2021-01-20">2021年1月</time>
+        <!--标准简单日期-->
+        <time datetime="2016-01">January 2016</time>
+        <!--只包含时间，小时和分钟数-->
+        <time datetime="19:30">19:30</time>
+        <!--日期和时间-->
+        <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+    </body>
 </html>
