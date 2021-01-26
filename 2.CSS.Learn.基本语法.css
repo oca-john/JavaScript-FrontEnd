@@ -1,3 +1,6 @@
+/* CSS语法参考W3C网站参考手册 */
+/* https://www.w3school.com.cn/cssref/index.asp */
+
 /* 单一选择器示例 */
 h2 {                    /* h2 称为选择器，选择 h2 级别的标题作为修改对象 */
                         /* {} 内为属性和修改值 */
@@ -47,6 +50,12 @@ h2 strong {         /*从strong选择器派生得到的新选择器*/
 /* 字体和文本 */
 /* 在 HTML 文件的 <head> 块中，创建引用时，标记对字体的引用 */
 /*<link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css"> */
+
+a:link {color:#FF0000;}		/* 未被访问的链接 */
+a:visited {color:#00FF00;}	/* 已被访问的链接 */
+a:hover {color:#FF00FF;}	/* 鼠标指针移动到链接上 */
+a:active {color:#0000FF;}	/* 正在被点击的链接 */
+
 html {                  /* 针对 HTML 文件全局的设置*/
     /* px 表示“像素(pixels)“： 基础字号为 10px； */
     font-size: 10px;
@@ -125,3 +134,25 @@ img {
 p {text-indent: 5em;}   /* 缩进 5 em，缩进为负值，表示悬挂缩进（如下） */
 p {text-indent: -5em; padding-left: 5em;}   /* padding表示内边距，防止文本超出网页边框 */
 p {text-indent: 20%;}   /* 按照百分比缩进 */
+
+
+/* 列表项 */
+ul {list-style-type : square}               /* 列表类型，方格 */
+ul li {list-style-image : url(xxx.gif)}     /* 列表图像，图片文件 */
+
+
+/* 表格边框 */
+table
+  {
+  border-collapse:collapse;             /* 边框折叠，原先双线边框合并为单一线条 */
+  }
+table, td, th
+  {
+  background-color:green;               /* 表格背景色 */
+  border:1px solid black;               /* 边框基本属性，宽度，直线，黑色 */
+  width:100%;                               /* 宽度占页面100% */
+  height:50px;                              /* 高度为固定像素 */
+  text-align:right;                     /* 水平对齐方式，向右对齐 */
+  vertical-align:bottom;                /* 垂直对齐方式，底边对齐 */
+  padding:15px;                             /* 表格内边距，内容距离边线的距离 */
+  }
