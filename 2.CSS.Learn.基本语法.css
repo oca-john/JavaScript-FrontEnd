@@ -62,6 +62,9 @@ p,li {
     line-height: 2;     /* 行高 */
     letter-spacing: 1px;/* 字符间距 */
 }
+h2 {text-transform: uppercase}              /* 选择标题，文本转为大写 */
+p.lowercase {text-transform: lowercase}     /* 段落中按类选择，转小写 */
+/* <p class="lowercase">LowerCase Letters</p> */
 
 
 /* 盒子 */
